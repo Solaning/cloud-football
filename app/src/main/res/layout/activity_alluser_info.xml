@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <RelativeLayout
+        android:id="@+id/layout_headphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accountbg" >
+
+        <ImageView
+            android:id="@+id/user_headphoto"
+            style="@style/Smile.ImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:id="@+id/layout_headleft"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/user_headphoto"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_headleft_top"
+                android:layout_width="200dp"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/add_nick"
+                     />
+
+                <TextView
+                    android:id="@+id/user_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/add_gender"
+                    android:textColor="#d5d9ca" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_accountname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/login_account" 
+                android:textColor="#d5d9ca"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:background="@drawable/about_mid_bg"
+        android:onClick="btnOnClick"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/Smile.TextView._Black"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/email"
+            android:textColor="#d5d9ca" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:background="@drawable/about_mid_bg"
+        android:onClick="btnOnClick"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/mobile" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/Smile.TextView._Black"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/mobile" 
+            android:textColor="#d5d9ca"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:background="@drawable/about_mid_bg"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/area" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            style="@style/Smile.TextView._Black"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/area" 
+            android:textColor="#d5d9ca"/>
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_chat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp">
+        
+        <Button
+        	android:id="@+id/startchat_btn"
+        	style="@style/Smile.Button.logout"
+       		android:layout_width="fill_parent"
+        	android:layout_height="45dp"
+        	android:layout_margin="@dimen/activity_vertical_margin"
+        	android:text="@string/chat" />
+        
+    </RelativeLayout>"
+    
+</LinearLayout>

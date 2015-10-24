@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/fl_football_court"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/iv_football_court_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/football_court"
+            android:scaleType="fitXY" />
+        <!-- android:background="@drawable/football_court" -->
+
+        <ImageButton
+            android:id="@+id/ib_football"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <RelativeLayout style="@style/ActionBar" >
+
+        <ImageButton
+            android:id="@+id/nav_left"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_slt"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/nav_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:minHeight="35dp"
+            android:minWidth="40dp"
+            android:padding="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="保存"
+            android:textColor="@color/white_color_selector"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nav_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:singleLine="true"
+            android:text="创建阵容"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.scvngr.levelup.views.gallery.Gallery
+        android:id="@+id/tip_selector_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="65dip"
+        android:layout_gravity="bottom|right"
+        android:alpha="0.8"
+        android:background="@color/darkblue"
+        android:padding="0dip"
+        android:visibility="gone" />
+
+</FrameLayout>

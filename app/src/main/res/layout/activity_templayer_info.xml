@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/teamplayerinfo_lin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Start   球员基本信息 -->
+
+            <LinearLayout
+                android:id="@+id/basic_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:alpha="0.9"
+                android:background="@color/teaminfo_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.kinth.football.view.RoundImageView
+                        android:id="@+id/iv_set_avator"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        imagecontrol:border_inside_color="#ffffff"
+                        imagecontrol:border_outside_color="#fffefa"
+                        imagecontrol:border_thickness="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp" >
+
+                            <TextView
+                                android:id="@+id/team_nick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="昵称:"
+                                android:textColor="@color/text_color" />
+
+                            <TextView
+                                android:id="@+id/tv_set_nick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@id/team_nick"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="#fffefa"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp" >
+
+                            <TextView
+                                android:id="@+id/team_role"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="位置:"
+                                android:textColor="@color/text_color" />
+
+                            <TextView
+                                android:id="@+id/team_role1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@id/team_role"
+                                android:text=""
+                                android:textColor="@color/white_color_disable"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/team_role2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@id/team_role1"
+                                android:text="副队长"
+                                android:textColor="@color/white_color_disable"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/white_color_disable" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp" >
+
+                            <TextView
+                                android:id="@+id/team_region"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="地区:"
+                                android:textColor="@color/text_color" />
+
+                            <TextView
+                                android:id="@+id/tv_set_erea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_toRightOf="@id/team_region"
+                                android:text=""
+                                android:textColor="@color/white_color_disable"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/home_uplevel_bg_color"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/synthesize_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="综合数据"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/change_circal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="1dp"
+                            android:layout_toRightOf="@id/synthesize_tv" >
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/syncdata_circle" />
+
+                            <TextView
+                                android:id="@+id/synthesize_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="0"
+                                android:textColor="@color/while_text_color"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/change_img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/change_circal"
+                            android:background="@drawable/radarchart_eq5" />
+
+                        <TextView
+                            android:id="@+id/synthesize_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/change_img1"
+                            android:text="0"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/home_uplevel_bg_color"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/morality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="球品口碑"
+                            android:textColor="#5BB2F4"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/change_circal2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_toRightOf="@id/morality" >
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/morality_circle" />
+
+                            <TextView
+                                android:id="@+id/morality_value_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="0"
+                                android:textColor="#5BB2F4"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/change_img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/change_circal2"
+                            android:background="@drawable/radarchart_eq5" />
+
+                        <TextView
+                            android:id="@+id/morality_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/change_img2"
+                            android:text="0"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/home_uplevel_bg_color"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/skill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="球技互评"
+                            android:textColor="#fead64"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/change_circal3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_toRightOf="@id/skill" >
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/skill_circle" />
+
+                            <TextView
+                                android:id="@+id/skill_value_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="0"
+                                android:textColor="#fead64"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/change_img3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/change_circal3"
+                            android:background="@drawable/radarchart_eq5" />
+
+                        <TextView
+                            android:id="@+id/skill_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/change_img3"
+                            android:text="0"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 年龄 -->
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/year"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/home_uplevel_bg_color"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="年龄"
+                            android:textColor="@color/text_color" />
+                        <!-- color/textView_bg -->
+
+                        <TextView
+                            android:id="@+id/years"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/year"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- 身高 -->
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/height"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/home_uplevel_bg_color"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="身高"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/heights"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/height"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- 体重 -->
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/weight"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/home_uplevel_bg_color"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="体重"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/weights"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- BMI -->
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/bmi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/home_uplevel_bg_color"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="BMI"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/bmi_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bmi"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_chat_and_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#45648792" />
+
+                <LinearLayout
+                    android:id="@+id/llt_chat_and_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/start_chat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="#66184e77"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="8dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_start_chat"
+                            android:drawablePadding="10dp"
+                            android:text="发起聊天"
+                            android:textColor="#8091a2"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/person_zone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#66184e77"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="8dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_person_zone"
+                            android:drawablePadding="10dp"
+                            android:text="个人空间"
+                            android:textColor="#8091a2"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End   球员基本信息 -->
+
+
+            <!-- Start 我的球队 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.9"
+                android:background="@color/teaminfo_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_uplevel_bg_color"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="5dp"
+                    android:text="我的球队"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/no_anyteam"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="该球员未有任何球队"
+                    android:textColor="@color/text_color"
+                    android:visibility="gone" />
+
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/horview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <!-- End 我的球队 -->
+
+
+            <!-- Start 五项数据 -->
+
+
+            <!-- End 五项数据 -->
+
+
+            <!-- Start 折线图 -->
+
+            <include
+                layout="@layout/linechart_viewpage_layout"
+                android:layout="@+id/twolinecharts" />
+            <!-- End 折线图 -->
+
+
+            <!-- Start 总比赛战绩 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.9"
+                android:background="@color/teaminfo_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_uplevel_bg_color" >
+
+                    <TextView
+                        android:id="@+id/all_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="5dp"
+                        android:text="比赛战绩 "
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/apart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/all_record"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="(出场"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/present_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/apart"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="#fffefa"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/part2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/present_count"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="次)"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/result_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="更多"
+                            android:textColor="#70a9bb"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/icon_detail_info_entry" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 胜 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/first"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/win_bg" />
+
+                        <TextView
+                            android:id="@+id/win_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="0"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="胜局"
+                            android:textColor="#3fc9a2"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- 平 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/second"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/equal_bg" />
+
+                        <TextView
+                            android:id="@+id/equal_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="0"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/equal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="平局"
+                            android:textColor="#73c0e6"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- 负 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/third_loss"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/fail_bg" />
+
+                        <TextView
+                            android:id="@+id/failed_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="0"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/failed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/third_loss"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="负局"
+                            android:textColor="#df4b4d"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color_disable" />
+
+                <LinearLayout
+                    android:id="@+id/recent_recode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:alpha="0.9"
+                    android:background="@color/teaminfo_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <include
+                        android:id="@+id/five_result"
+                        layout="@layout/five_match_winfailequal_layout" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End 总比赛战绩 -->
+
+
+            <!-- Start 友谊赛战绩 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.9"
+                android:background="@color/teaminfo_bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_uplevel_bg_color" >
+
+                    <TextView
+                        android:id="@+id/friendly_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="5dp"
+                        android:text="友谊赛战绩 "
+                        android:textColor="@color/while_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/friendly_apart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/friendly_record"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="(出场"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/friend_present_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/friendly_apart"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="#fffefa"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/friendly_part"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/friend_present_count"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="次)"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 胜 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/friendly_first"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/win_bg" />
+
+                        <TextView
+                            android:id="@+id/friendly_win_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="13dp"
+                            android:text="0"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/first_win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/friendly_first"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="胜"
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- 平 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/friendly_second"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/equal_bg" />
+
+                        <TextView
+                            android:id="@+id/friendly_equal_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="13dp"
+                            android:text="0"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/friendly_equal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/friendly_second"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="平"
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <!-- 负 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/firendly_third"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/fail_bg" />
+
+                        <TextView
+                            android:id="@+id/friendly_failed_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="13dp"
+                            android:text="0"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/friendly_failed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/firendly_third"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="负"
+                            android:textColor="#fffefa"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color_disable" />
+
+                <LinearLayout
+                    android:id="@+id/friendly_recent_recode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:alpha="0.9"
+                    android:background="@color/teaminfo_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/home_uplevel_bg_color"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/friend_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="近期比赛战绩:"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/friend_none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_first"
+                            android:text="无"
+                            android:textColor="@color/text_color"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/friend_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_first" />
+
+                        <ImageView
+                            android:id="@+id/friend_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_one" />
+
+                        <ImageView
+                            android:id="@+id/friend_third"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_two" />
+
+                        <ImageView
+                            android:id="@+id/friend_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_third" />
+
+                        <ImageView
+                            android:id="@+id/friend_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_four" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color_disable"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/friendly_result_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="更多"
+                    android:textColor="@color/start_to_chart_textcolor"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <!-- End 友谊赛战绩 -->
+
+
+            <!-- 金超聯賽 -->
+
+            <ImageView
+                android:id="@+id/tournament"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

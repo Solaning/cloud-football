@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 朋友圈弹出的输入框 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#1b252b"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/friendactivity_comment_detail_line"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/input_bar_bg_normal" -->
+
+        <com.kinth.football.view.SmiliesEditText
+            android:id="@+id/et_input_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@null"
+            android:maxHeight="100dp"
+            android:minHeight="45dp"
+            android:paddingBottom="5dp"
+            android:focusable="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20" >
+        </com.kinth.football.view.SmiliesEditText>
+
+        <Button
+            android:id="@+id/bt_send_comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_chat_send_selector"
+            android:textColor="@color/base_color_text_black" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

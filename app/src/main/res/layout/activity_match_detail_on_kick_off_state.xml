@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_nav_only_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_match_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_data"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="2015年3月17日  15：30 星期六"
+                        android:textColor="#bae0f5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:background="#66a8a8a8" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp" >
+
+                    <View
+                        android:layout_width="0.1dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="#66a8a8a8" />
+
+                    <TextView
+                        android:id="@+id/tv_home_team_name"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:background="#c3e0ee"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="中国银行"
+                        android:textColor="#263f4e"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_away_team_name"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:background="#c3e0ee"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="工商银行"
+                        android:textColor="#263f4e"
+                        android:textSize="16sp" />
+
+                    <com.kinth.football.view.RoundImageView
+                        android:id="@+id/iv_home_team_badge"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:padding="2.0dip"
+                        android:src="@drawable/team_bage_default"
+                        imagecontrol:border_inside_color="#e2e2e2"
+                        imagecontrol:border_outside_color="#e2e2e2"
+                        imagecontrol:border_thickness="1dp" />
+
+                    <com.kinth.football.view.RoundImageView
+                        android:id="@+id/iv_away_team_badge"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="60dp"
+                        android:padding="2.0dip"
+                        android:src="@drawable/team_bage_default"
+                        imagecontrol:border_inside_color="#e2e2e2"
+                        imagecontrol:border_outside_color="#e2e2e2"
+                        imagecontrol:border_thickness="1dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_vs"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/vs"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/reffree_set_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/set_grade" />
+
+                    <TextView
+                        android:id="@+id/tv_match_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/style_textview3"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="国贸世纪体育运动场5号场"
+                        android:textColor="#bae0f5"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#66a8a8a8" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_alignTop="@+id/llt_2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#66a8a8a8" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_alignBottom="@+id/llt_2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#66a8a8a8" />
+
+                    <LinearLayout
+                        android:id="@+id/llt_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal" >
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            android:background="#66a8a8a8" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_referee_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="3dp"
+                                android:background="#e6f1f7"
+                                android:ellipsize="end"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="5dp"
+                                android:singleLine="true"
+                                android:textColor="#263f4e"
+                                android:textSize="14sp" />
+
+                            <com.kinth.football.view.RoundImageView
+                                android:id="@+id/refree_avatar"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:padding="2.0dip"
+                                android:src="@drawable/icon_default_head"
+                                imagecontrol:border_inside_color="#e2e2e2"
+                                imagecontrol:border_outside_color="#e2e2e2"
+                                imagecontrol:border_thickness="1dp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            android:background="#66a8a8a8" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_match_cost"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="#e6f1f7"
+                                android:gravity="center"
+                                android:textColor="#263f4e" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            android:background="#66a8a8a8" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_match_player_count"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="#e6f1f7"
+                                android:gravity="center"
+                                android:text="11人"
+                                android:textColor="#263f4e" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            android:background="#66a8a8a8" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:background="#2c566e"
+                                    android:gravity="center"
+                                    android:paddingBottom="3dp"
+                                    android:paddingTop="3dp"
+                                    android:text="裁判"
+                                    android:textColor="#bae0f5"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="#2c566e"
+                                    android:gravity="center"
+                                    android:paddingBottom="3dp"
+                                    android:paddingTop="3dp"
+                                    android:text="费用"
+                                    android:textColor="#bae0f5"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:background="#2c566e"
+                                    android:gravity="center"
+                                    android:paddingBottom="3dp"
+                                    android:paddingTop="3dp"
+                                    android:text="比赛人数"
+                                    android:textColor="#bae0f5"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_match_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#c3e0ee"
+                    android:padding="10dp"
+                    android:text="比赛详情的相关描述!!!"
+                    android:textColor="#263f4e"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#1e445b" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F414C"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="参赛人员"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.kinth.football.view.HorizontalListView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:widget="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/teamInfo_memberlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="105dp"
+                    android:background="#203440"
+                    android:scrollbars="none"
+                    widget:dividerWidth="2dp" />
+            </LinearLayout>
+            <!-- 比赛队服 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F414C"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="比赛队服"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#e6f1f7"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="本方队服"
+                            android:textColor="#263f4e"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:id="@+id/llt_homejersey"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/jersey_default_circle"
+                            android:gravity="center" >
+
+                            <com.kinth.football.view.RoundImageView
+                                android:id="@+id/self_jersey"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#e6f1f7"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="对方队服"
+                            android:textColor="#263f4e"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:id="@+id/llt_otherjersey"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/jersey_default_circle"
+                            android:gravity="center" >
+
+                            <com.kinth.football.view.RoundImageView
+                                android:id="@+id/other_jersey"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_home_team_formation_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2a485a"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:text="主队阵容"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rtl_home_team_formation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/iv_home_team_formation_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_home_team_set_formation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:alpha="0.8"
+                        android:background="#1c2d38"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="查看"
+                        android:textColor="#4882a5"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_away_team_formation_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#2a485a"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:text="客队阵容"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rtl_away_team_formation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/iv_away_team_formation_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_away_team_set_formation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:alpha="0.8"
+                        android:background="#1c2d38"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="查看阵容"
+                        android:textColor="#4882a5"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

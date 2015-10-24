@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 	xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/message_top_height"
+    android:orientation="vertical" 
+    android:background="@drawable/btn_selector"
+    android:alpha="0.75"
+    android:padding="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <com.kinth.football.view.RoundImageView
+            android:id="@+id/iv_recent_avatar"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="13.0dip"
+            android:adjustViewBounds="true"
+            android:padding="2.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/head"
+            imagecontrol:border_inside_color="#ffffff"
+            imagecontrol:border_outside_color="#fffefa"
+            imagecontrol:border_thickness="1dp" />
+        <!-- <com.meg7.widget.CircleImageView
+            android:id="@+id/iv_recent_avatar"
+            style="@style/Smile.ImageView.Photo_Middle"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/head" /> -->
+
+        <TextView
+            android:id="@+id/tv_recent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="23.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="58.0dip"
+            android:layout_marginTop="5dp"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/iv_recent_avatar"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_recent_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_below="@id/tv_recent_name"
+             android:layout_toRightOf="@id/iv_recent_avatar"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="35.0dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip"
+            android:singleLine="true"
+            android:textColor="@drawable/recent_message_text_color_selector"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@+id/tv_recent_time"
+            android:layout_width="wrap_content"
+            android:layout_height="25.0dip"
+            android:layout_above="@id/tv_recent_msg"
+            android:layout_alignParentRight="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginRight="10dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="0.0dip"
+            android:singleLine="true"
+            android:textColor="@drawable/recent_message_text_color_selector"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/tv_recent_unread"
+            android:layout_width="16dip"
+            android:layout_height="16.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_recent_time"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/list_newmessage2"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="10.0dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

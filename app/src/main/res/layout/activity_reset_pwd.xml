@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AppWidget"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/llt_tittlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/common_actionbar"
+            layout="@layout/include_action_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llt_tittlebar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_selector"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edtOldPwd"
+            style="@style/register_edit"
+            android:background="@drawable/btn_selector"
+            
+            android:hint="请输入旧密码"
+            android:inputType="textPassword" 
+              android:textColor="@android:color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+           android:background="#66ffffff" />
+
+        <EditText
+            android:id="@+id/edtPwd"
+            style="@style/register_edit"
+            android:background="@drawable/btn_selector"
+   
+            android:hint="请输入新密码"
+            android:inputType="textPassword" 
+            android:textColor="@android:color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+          android:layout_height="0.1dp"
+          android:background="#66ffffff" />
+
+        <EditText
+            android:id="@+id/edtPwd2"
+            style="@style/register_edit"
+            android:background="@drawable/btn_selector"
+          
+            android:hint="请再次输入新密码"
+            android:inputType="textPassword" 
+              android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_regist"
+        style="@style/WhiteText"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/llt_main"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_next_selector"
+        android:onClick="btnOnClick"
+        android:text="重置密码" />
+
+</RelativeLayout>

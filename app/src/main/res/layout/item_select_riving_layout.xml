@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择比赛对手 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rtl_select_riving_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="5.0dip"
+    android:paddingTop="5.0dip" >
+
+   <com.kinth.football.view.RoundImageView
+        android:id="@+id/iv_team_picture"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_marginLeft="13.0dip"
+        android:adjustViewBounds="true"
+        android:padding="2.0dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/team_bage_default"
+            imagecontrol:border_inside_color="#ffffff"
+            imagecontrol:border_outside_color="#fffefa"
+            imagecontrol:border_thickness="1dp"  />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dp_8"
+        android:duplicateParentState="true"
+        android:src="@drawable/img_to" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@id/iv_arrow_right"
+        android:layout_toRightOf="@id/iv_team_picture"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_team_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="巴塞罗那"
+            
+                android:textSize="18.0sp"
+                 android:textColor="@android:color/white" 
+                 android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_team_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="其他介绍。。"
+              
+                android:textSize="14.0sp" 
+                 android:textColor="@android:color/white"
+                 android:visibility="gone"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下战书" 
+            android:background="#2c566e"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

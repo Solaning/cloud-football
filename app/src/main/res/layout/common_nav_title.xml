@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 只有标题，没有其他按钮 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActionBar"
+    android:background="#25333C" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="48.0dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18.0sp" />
+
+</RelativeLayout>

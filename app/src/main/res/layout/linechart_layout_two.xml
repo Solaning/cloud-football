@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/five_result_data_two"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_weight="1"
+    android:alpha="0.9"
+    android:background="@color/teaminfo_bg"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_uplevel_bg_color"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/fivedata_text_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="球技互评及球品口碑"
+           android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/no_linecharttwo_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/my_team_bg"
+            android:text="(无)"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nodata_two"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="目前暂无数据"
+        android:textColor="@color/while_text_color"
+        android:visibility="gone" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart_two"
+        android:layout_width="fill_parent"
+        android:layout_height="155dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp" />
+
+</LinearLayout>

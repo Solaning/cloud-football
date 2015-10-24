@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llt_radarchart"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:alpha="0.9"
+    android:background="@color/teaminfo_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_uplevel_bg_color"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp"
+        android:text="云五数据"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/radar_chart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/nonet_nodata"
+            android:layout_width="0dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="No chart data available."
+            android:textColor="#e4b033"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/lin_radarchart"
+            android:layout_width="0dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <com.github.mikephil.charting.charts.RadarChart
+                android:id="@+id/radarchart"
+                android:layout_width="160dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fivedata_lin"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/home_uplevel_bg_color"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/attack_point"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/radarchart_point5" />
+
+                <TextView
+                    android:id="@+id/attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/attack_point"
+                    android:text="进攻"
+                    android:textColor="@color/while_text_color" />
+
+                <TextView
+                    android:id="@+id/attack_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/attack"
+                    android:text="0"
+                    android:textColor="@color/while_text_color" />
+
+                <ImageView
+                    android:id="@+id/attack_updowneq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/attack_value"
+                    android:background="@drawable/radarchart_eq5" />
+
+                <TextView
+                    android:id="@+id/attack_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/attack_updowneq"
+                    android:text="0"
+                    android:textColor="@color/while_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/defence_point"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/radarchart_point5" />
+
+                <TextView
+                    android:id="@+id/defence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/defence_point"
+                    android:text="防守"
+                    android:textColor="@color/while_text_color" />
+
+                <TextView
+                    android:id="@+id/defence_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/defence"
+                    android:text="0"
+                    android:textColor="@color/while_text_color" />
+
+                <ImageView
+                    android:id="@+id/defence_updowneq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/defence_value"
+                    android:background="@drawable/radarchart_eq5" />
+
+                <TextView
+                    android:id="@+id/defence_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/defence_updowneq"
+                    android:text="0"
+                    android:textColor="@color/while_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/stren_point"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/radarchart_point5" />
+
+                <TextView
+                    android:id="@+id/stren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/stren_point"
+                    android:text="体能"
+                    android:textColor="@color/while_text_color" />
+
+                <TextView
+                    android:id="@+id/stren_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/stren"
+                    android:text="0"
+                    android:textColor="@color/while_text_color" />
+
+                <ImageView
+                    android:id="@+id/stren_updowneq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/stren_value"
+                    android:background="@drawable/radarchart_eq5" />
+
+                <TextView
+                    android:id="@+id/stren_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/stren_updowneq"
+                    android:text="0"
+                    android:textColor="@color/while_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/skill_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/radarchart_point5" />
+
+                <TextView
+                    android:id="@+id/skill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/skill_point"
+                    android:text="技术"
+                    android:textColor="@color/while_text_color" />
+
+                <TextView
+                    android:id="@+id/skill_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/skill"
+                    android:text="0"
+                    android:textColor="@color/while_text_color" />
+
+                <ImageView
+                    android:id="@+id/skill_updowneq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/skill_value"
+                    android:background="@drawable/radarchart_eq5" />
+
+                <TextView
+                    android:id="@+id/skill_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/skill_updowneq"
+                    android:text="0"
+                    android:textColor="@color/while_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/awareness_point"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/radarchart_point5" />
+
+                <TextView
+                    android:id="@+id/awareness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/awareness_point"
+                    android:text="侵略"
+                    android:textColor="@color/while_text_color" />
+
+                <TextView
+                    android:id="@+id/awareness_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/awareness"
+                    android:text="0"
+                    android:textColor="@color/while_text_color" />
+
+                <ImageView
+                    android:id="@+id/awareness_updowneq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/awareness_value"
+                    android:background="@drawable/radarchart_eq5" />
+
+                <TextView
+                    android:id="@+id/awareness_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/awareness_updowneq"
+                    android:text="0"
+                    android:textColor="@color/while_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

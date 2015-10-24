@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Football.iml" filepath="$PROJECT_DIR$/Football.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidbootstrap/androidbootstrap.iml" filepath="$PROJECT_DIR$/androidbootstrap/androidbootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datetimepicker/datetimepicker.iml" filepath="$PROJECT_DIR$/datetimepicker/datetimepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leftlockedgallery/leftlockedgallery.iml" filepath="$PROJECT_DIR$/leftlockedgallery/leftlockedgallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smssdk/smssdk.iml" filepath="$PROJECT_DIR$/smssdk/smssdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/styled_dialogs/styled_dialogs.iml" filepath="$PROJECT_DIR$/styled_dialogs/styled_dialogs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel/wheel.iml" filepath="$PROJECT_DIR$/wheel/wheel.iml" />
+    </modules>
+  </component>
+</project>

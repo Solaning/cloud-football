@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rtl_team_item"
+    android:layout_width="fill_parent"
+    android:background="@drawable/item_of_list_bg"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/before"
+        android:background="@drawable/btn_selector"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="8.0dip" >
+
+        <com.kinth.football.view.RoundImageView
+            android:id="@+id/iv_team_badge"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginLeft="13.0dip"
+            android:adjustViewBounds="true"
+            android:padding="2.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/team_bage_default"
+            imagecontrol:border_inside_color="#ffffff"
+            imagecontrol:border_outside_color="#fffefa"
+            imagecontrol:border_thickness="1dp" />
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_8"
+            android:gravity="center"
+            >
+            <TextView
+                    android:id="@+id/tv_team_player_num"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/team_number"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:text="11人"
+                    android:gravity="center"       
+                    android:textColor="@color/white_color_disable"
+                    android:textSize="12sp" 
+                    android:layout_marginRight="5dp"/>
+        <ImageView
+            android:id="@+id/iv_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:src="@drawable/img_to" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+           
+            android:layout_toRightOf="@id/iv_team_badge"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_team_name"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#fffefa"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_team_player_num"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/team_number"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:text="11人"
+                    android:gravity="center"
+                    
+                    android:textColor="@color/white_color_disable"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/team_descp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#8ba3af"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

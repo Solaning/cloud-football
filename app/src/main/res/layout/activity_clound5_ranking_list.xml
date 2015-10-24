@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b252b"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/llt_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#152026"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_composite"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="1dp"
+                android:background="#152026"
+                android:text="综合"
+                android:textColor="@color/btn_txt_selector"
+                android:textSize="16sp" />
+            
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/darkblue"
+                />
+
+            <Button
+                android:id="@+id/btn_attack"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="1dp"
+                android:background="#152026"
+                android:text="进攻"
+                android:textColor="@color/btn_txt_selector"
+                 android:textSize="16sp" />
+
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/darkblue"
+                />
+            
+            <Button
+                android:id="@+id/btn_defence"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="1dp"
+                android:background="#152026"
+                android:text="防守"
+                android:textColor="@color/btn_txt_selector"
+                android:textSize="16sp" />
+
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/darkblue"
+                />
+            
+            <Button
+                android:id="@+id/btn_awareness"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="1dp"
+                android:background="#152026"
+                android:text="侵略性"
+                android:textColor="@color/btn_txt_selector"
+                android:textSize="16sp" />
+
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/darkblue"
+                />
+            
+            <Button
+                android:id="@+id/btn_skill"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="1dp"
+                android:background="#152026"
+                android:text="技术"
+                android:textColor="@color/btn_txt_selector"
+                android:textSize="16sp" />
+
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/darkblue"
+                />
+            
+            <Button
+                android:id="@+id/btn_strength"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="1dp"
+                android:background="#152026"
+                android:text="体能"
+                android:textColor="@color/btn_txt_selector"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3a8ab9" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="#c1e8ff"
+            android:text="排名" 
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="#c1e8ff"
+            android:text="球员" 
+             android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="#c1e8ff"
+            android:text="得分" 
+             android:textSize="16sp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.kinth.football.view.xlist.XListView
+            android:id="@+id/list_cloud5_ranking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="true"
+            android:listSelector="#00000000" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AppWidget"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColor" >
+
+<LinearLayout 
+    android:id="@+id/llt_tittlebar"
+     android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    >
+        <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/llt_main"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/llt_tittlebar"
+    android:layout_marginTop="25dp"  
+    android:orientation="vertical"
+      >
+	
+    
+
+    <EditText
+        android:id="@+id/edtPwd"
+        style="@style/register_edit"
+        android:drawableLeft="@drawable/icon_register_pwd"
+        android:hint="@string/hit_reset_password"
+        android:inputType="textVisiblePassword" />
+		
+</LinearLayout>
+
+<Button
+    android:id="@+id/btn_regist"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:layout_below="@+id/llt_main"
+    android:layout_marginTop="25dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:text="重置密码" 
+    style="@style/WhiteText"
+    android:onClick="btnOnClick"
+    android:background="@drawable/btn_login_selector"/>
+
+</RelativeLayout>

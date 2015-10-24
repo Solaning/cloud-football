@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/viewGroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/common_nav_only_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- Start 友谊赛战绩 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.9"
+                android:background="@color/teaminfo_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_uplevel_bg_color" >
+
+                    <TextView
+                        android:id="@+id/friendly_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="5dp"
+                        android:text="友谊赛战绩 "
+                        android:textColor="@color/while_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/friendly_apart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/friendly_record"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="(出场"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/friend_present_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/friendly_apart"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="#fffefa"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/friendly_part"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/friend_present_count"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="次)"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/friendly_result_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="更多"
+                            android:textColor="#70a9bb"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/icon_detail_info_entry" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 胜 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/friendly_first"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/win_bg" />
+
+                        <TextView
+                            android:id="@+id/friendly_win_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/friendly_first"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="胜局"
+                            android:textColor="#3fc9a2"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                    <!-- 平 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/friendly_second"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/equal_bg" />
+
+                        <TextView
+                            android:id="@+id/friendly_equal_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/friendly_equal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/friendly_second"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="平局"
+                            android:textColor="#73c0e6"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                    <!-- 负 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/firendly_third"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/fail_bg" />
+
+                        <TextView
+                            android:id="@+id/friendly_failed_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/friendly_failed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/firendly_third"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="败局"
+                            android:textColor="#df4b4d"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color_disable"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/friendly_recent_recode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:alpha="0.9"
+                    android:background="@color/teaminfo_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/home_uplevel_bg_color"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/friend_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="近期比赛战绩:"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/friend_none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_first"
+                            android:text="无"
+                            android:textColor="@color/text_color"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/friend_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_first" />
+
+                        <ImageView
+                            android:id="@+id/friend_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_one" />
+
+                        <ImageView
+                            android:id="@+id/friend_third"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_two" />
+
+                        <ImageView
+                            android:id="@+id/friend_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_third" />
+
+                        <ImageView
+                            android:id="@+id/friend_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/friend_four" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- End 友谊赛战绩 -->
+            <!-- Start 锦标赛战绩 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.9"
+                android:background="@color/teaminfo_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_uplevel_bg_color" >
+
+                    <TextView
+                        android:id="@+id/tournament_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="5dp"
+                        android:text="锦标赛战绩 "
+                        android:textColor="@color/while_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tournament_apart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tournament_record"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="(出场"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tournament_present_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tournament_apart"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="#fffefa"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tournament_part"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tournament_present_count"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="次)"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/tournament_result_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="更多"
+                            android:textColor="#70a9bb"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/icon_detail_info_entry" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 胜 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/tournament_first_22"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/win_bg" />
+
+                        <TextView
+                            android:id="@+id/tournament_win_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tournament_first_22"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="胜局"
+                            android:textColor="#3fc9a2"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                    <!-- 平 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/tournament_second"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/equal_bg" />
+
+                        <TextView
+                            android:id="@+id/tournament_equal_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tournament_equal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tournament_second"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="平局"
+                            android:textColor="#73c0e6"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                    <!-- 负 -->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/tournament_third_344"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/fail_bg" />
+
+                        <TextView
+                            android:id="@+id/tournament_failed_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:textColor="#fffefa"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tournament_failed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tournament_third_344"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5dp"
+                            android:text="败局"
+                            android:textColor="#df4b4d"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color_disable"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/tournament_recent_recode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:alpha="0.9"
+                    android:background="@color/teaminfo_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/home_uplevel_bg_color"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/tournament_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="近期比赛战绩:"
+                            android:textColor="@color/while_text_color"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tournament_none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tournament_first"
+                            android:text="无"
+                            android:textColor="@color/text_color"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/tournament_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tournament_first" />
+
+                        <ImageView
+                            android:id="@+id/tournament_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tournament_one" />
+
+                        <ImageView
+                            android:id="@+id/tournament_third"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tournament_two" />
+
+                        <ImageView
+                            android:id="@+id/tournament_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tournament_third" />
+
+                        <ImageView
+                            android:id="@+id/tournament_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tournament_four" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End 友谊赛战绩 -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

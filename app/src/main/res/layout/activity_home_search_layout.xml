@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homes_lin"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/ActionBar" >
+         <ImageButton
+            android:id="@+id/nav_left"
+            android:layout_centerVertical="true"
+        	android:layout_width="30dip"
+        	android:layout_marginLeft="10dp"
+        	android:layout_height="30dip"
+        	android:background="@drawable/back_slt"
+        	android:clickable="false"
+        	android:focusable="false"
+        	android:contentDescription="@string/app_name"
+        	android:scaleType="centerInside" />
+
+        <com.kinth.football.view.ClearEditText
+            android:id="@+id/et_msg_search"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/nav_left"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:layout_centerVertical="true"
+            android:hint="搜索球员，球队"
+            android:paddingLeft="10dp"
+            android:minHeight="40dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtl_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:visibility="gone"
+        android:background="@drawable/btn_selector"
+       >
+
+        <ImageView
+            android:id="@+id/iv_search_icon"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:background="#3cb2ef"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/icon_msg_search" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_search_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/iv_search_icon"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sp_16" 
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/search_result"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+           >
+			<!-- 球队相关 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                
+             
+                android:layout_marginTop="10dp"
+               
+                android:layout_marginBottom="10dp" >
+                <TextView
+                    android:id="@+id/team_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="球队相关"
+                    android:background="#662F414C"
+                    android:gravity="center|center_vertical"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                <View
+                    android:id="@+id/teamabout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Grey" />
+                <ListView
+                    android:id="@+id/search_team_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                      android:dividerHeight="1dp"
+                      
+                    />
+            </LinearLayout>
+
+            <!-- 球员相关-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+               
+              
+                android:layout_marginTop="10dp"
+             
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/player_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_vertical"
+                    android:padding="10dp"
+                    android:text="球员相关"
+                    android:textColor="#ffffff"
+                     android:background="#662F414C"
+                    android:textSize="18sp" />
+                <View
+                    android:id="@+id/playerabout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Grey" />
+                <ListView
+                    android:id="@+id/search_player_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                            android:divider="@null"
+                            android:dividerHeight="1dp"
+                     />
+            </LinearLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

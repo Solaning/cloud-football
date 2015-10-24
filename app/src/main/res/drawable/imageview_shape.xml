@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+       <!-- 边框的颜色 ：不能和窗口背景色一样-->
+    <stroke
+        android:width="3dp"
+        android:color="#2a546d" />
+
+</shape>

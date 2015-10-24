@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/ActionBar" >
+
+         <TextView
+            android:id="@+id/nav_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="规则说明" />
+
+        <TextView
+            android:id="@+id/nav_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_20" />
+    </RelativeLayout>
+
+    <!-- Start    五种比赛状态按钮 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:alpha="0.8"
+        android:background="#20282a"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 创建中 -->
+        <RelativeLayout
+            android:id="@+id/btn_match_invitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/inviting_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/inviting" />
+
+            <RelativeLayout
+                android:id="@+id/rel_inviting_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-8dp"
+                android:addStatesFromChildren="true"
+                android:layout_toRightOf="@id/inviting_img"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/state_count" />
+
+                <TextView
+                    android:id="@+id/inviting_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="1"
+                    android:textColor="@color/matchfragment_state_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/inviting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inviting_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="创建中"
+                android:textColor="@color/share_letter_selector"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#233036" />
+
+        <!-- 报名中 -->
+
+        <RelativeLayout
+            android:id="@+id/btn_match_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/created_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/created" />
+
+            <RelativeLayout
+                android:id="@+id/rel_created_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-8dp"
+                android:addStatesFromChildren="true"
+                android:layout_toRightOf="@id/created_img"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/state_count" />
+
+                <TextView
+                    android:id="@+id/created_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="1"
+                    android:textColor="@color/matchfragment_state_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/created_img"
+                android:layout_centerHorizontal="true"
+                android:text="报名中"
+                android:textColor="@color/share_letter_selector"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#233036" />
+
+        <!-- 待开赛 -->
+
+        <RelativeLayout
+            android:id="@+id/btn_match_wait"
+            android:layout_width="wrap_content"
+            android:addStatesFromChildren="true"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/pedding_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pedding"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_pedding_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-8dp"
+                android:addStatesFromChildren="true"
+                android:layout_toRightOf="@id/pedding_img"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/state_count" />
+
+                <TextView
+                    android:id="@+id/pedding_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="1"
+                    android:textColor="@color/matchfragment_state_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pedding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pedding_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="待开赛"
+                android:textColor="@color/share_letter_selector"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#233036" />
+
+        <!-- 比赛中 -->
+
+        <RelativeLayout
+            android:id="@+id/btn_match_kick_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/playing_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/playing"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_playing_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:addStatesFromChildren="true"
+                android:layout_marginLeft="-8dp"
+                android:layout_toRightOf="@id/playing_img"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/state_count" />
+
+                <TextView
+                    android:id="@+id/playing_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="1"
+                    android:textColor="@color/matchfragment_state_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/playing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playing_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="比赛中"
+                android:textColor="@color/share_letter_selector"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#233036" />
+
+        <!-- 待评价 -->
+
+        <RelativeLayout
+            android:id="@+id/btn_match_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/over_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/over"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_over_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-8dp"
+                android:addStatesFromChildren="true"
+                android:layout_toRightOf="@id/over_img"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/state_count" />
+
+                <TextView
+                    android:id="@+id/over_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="1"
+                    android:textColor="@color/matchfragment_state_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/over_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="待评价"
+                android:textColor="@color/share_letter_selector"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/friendly_play"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+            
+            <ImageView
+                android:id="@+id/all_the_games"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

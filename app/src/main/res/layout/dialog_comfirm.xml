@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#20B2AA"
+			android:textSize="22sp"
+            android:layout_marginRight="50dp"
+            />
+        
+        <View 
+            android:id="@+id/title_underline"
+	        android:layout_width="fill_parent"
+	        android:layout_height="4dp"
+	        android:background="#20B2AA"
+        />
+
+    </LinearLayout>
+ 
+	    <TextView
+	        android:id="@+id/dialog_content"
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#696969"
+			android:textSize="20sp"
+			android:padding="10dp"
+			android:lineSpacingExtra="5dp"
+			android:scrollbars="vertical"
+			android:gravity="center_vertical"
+			android:minHeight="70dp"
+			android:maxHeight="200dp"
+	        />
+    
+	<LinearLayout 
+	    android:id="@+id/ll_items"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D3D3D3"
+        >
+    </LinearLayout>
+	    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D3D3D3"
+        >
+	    <Button
+	        android:id="@+id/btn_comfirm"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="确定"
+	        android:textSize="16sp"
+	        android:textColor="#696969"
+	        android:padding="15dp"
+	        android:background="@drawable/btn_color"
+	        android:layout_weight="0.5"
+	        android:layout_marginRight="1dp"
+	        android:layout_marginTop="0.5dp"
+	        />
+	    <Button
+	        android:id="@+id/btn_cancel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="取消" 
+	        android:textSize="16sp"
+	        android:textColor="#696969"
+	        android:padding="15dp"
+	        android:background="@drawable/btn_color"
+	        android:layout_weight="0.5"
+	        android:layout_marginTop="0.5dp"
+	        />
+    </LinearLayout>
+</LinearLayout>

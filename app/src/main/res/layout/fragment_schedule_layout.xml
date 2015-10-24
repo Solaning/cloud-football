@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_nav_only_right" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        android:orientation="vertical" >
+
+        <com.kinth.football.view.ClearEditText
+            android:id="@+id/et_msg_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_action_bar_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/base_edit_input"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/message_search_hint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/et_msg_search"
+            android:layout_gravity="top"
+            android:background="@drawable/user_add_top_bg"
+            android:orientation="horizontal" >
+            
+			<com.kinth.football.view.xlist.XListView
+        		android:id="@+id/listview_schedule"
+        		android:scrollbars="none"
+        		android:layout_width="match_parent"
+        		android:layout_height="match_parent"
+        		android:background="@android:color/white"
+        		android:cacheColorHint="@android:color/transparent"
+        		android:dividerHeight="@dimen/dp_1" />
+
+			<LinearLayout
+		        android:id="@+id/llt_push_message"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:minHeight="@dimen/dp_20"
+		        android:visibility="gone" >
+		
+		        <TextView
+		            android:id="@+id/tv_tip"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="消息提示："
+		            android:textColor="@android:color/black"
+		            android:textSize="@dimen/sp_16" />
+		
+		        <TextView
+		            android:id="@+id/tv_push_message_date"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="@android:color/black"
+		            android:textSize="@dimen/sp_14" />
+		
+				<TextView
+		            android:id="@+id/tv_push_message"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_margin="@dimen/dp_5"
+		            android:ellipsize="marquee" 
+		            android:layout_weight="1"
+		            android:textSize="@dimen/sp_14" />
+				
+		        <ImageView
+		            android:id="@+id/iv_arrow_right"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical|right"
+		            android:layout_margin="@dimen/dp_8"
+		            android:duplicateParentState="true"
+		            android:src="@drawable/selector_arrow_black" />
+		    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_dialog"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/v2_gallery_contacts_dialog_background"
+                android:gravity="center"
+                android:padding="5dip"
+                android:textColor="@color/base_actionbar_bg"
+                android:textSize="35.0dip"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <com.kinth.football.view.MyLetterView
+            android:id="@+id/right_letter_bar"
+            android:layout_width="25dip"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent" />
+    </RelativeLayout>
+
+</LinearLayout>

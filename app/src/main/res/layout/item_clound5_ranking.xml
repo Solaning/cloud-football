@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_selector4"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+    
+    <TextView
+        android:id="@+id/tv_ranking" 
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:layout_height="wrap_content"
+        android:textColor="@color/while_text_color"
+        android:text="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.kinth.football.view.RoundImageView
+            android:id="@+id/iv_member_picture"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:padding="2.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_default_head"
+            imagecontrol:border_inside_color="#ffffff"
+            imagecontrol:border_outside_color="#fffefa"
+            imagecontrol:border_thickness="1dp" />
+
+        <TextView
+            android:id="@+id/tv_member_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="巴塞罗那"
+            android:minWidth="100dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fffefa"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/tv_score"
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:layout_height="wrap_content"
+        android:textColor="@color/while_text_color"
+        android:text="98"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:textSize="26sp"
+        />
+
+</LinearLayout>

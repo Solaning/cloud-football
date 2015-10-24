@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_nav_button" />
+
+    <EditText
+        android:id="@+id/et_thought_of_this_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/padding"
+        android:gravity="left|center_vertical"
+        android:hint="这一刻的想法..."
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:maxHeight="120dp"
+        android:minHeight="100dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="false" />
+
+    <GridView
+        android:id="@+id/gridGallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="@dimen/GridItemSizeTiny"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/GridItemSpacing"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="auto_fit"
+        android:scrollbarStyle="insideOverlay"
+        android:smoothScrollbar="true"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/GridItemSpacing"
+        tools:listitem="@layout/moments_publish_gallery_item" >
+    </GridView>
+
+</LinearLayout>

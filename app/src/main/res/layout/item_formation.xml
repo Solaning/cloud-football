@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="165dp"
+    android:background="@drawable/press_state_background"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/list_gap"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:alpha="1"
+        android:background="@null" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85"
+        android:background="@color/darkblue" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="“混凝土”阵型"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:textColor="#696969" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.85"
+        android:background="@color/lightblue"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:text="该阵型在中、北美洲最为流行，在欧洲和南美也有采用。它的特点是注重于进攻的人数优势，倾向于冒险和令人激动的打法形式，当进攻时，除了四前锋和三前卫参战外，两边卫也积极助攻，在防守时，1+3+3+4阵型要求中场必须有一队员撤回担当盯人中卫的角色，锋线队员退守加强中场力量，中卫多以清道夫形式指挥防守并随时准备补位。
+该阵型的特点是进攻力量强，但在防守组织上稍有疏忽，便容易产生漏洞，尤其是当中场队员压人禁区附近，而对方突然发动长传快速反击时，这方面的不足之处更易暴露"
+                android:textColor="@color/Grey"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="130dp" >
+
+            <ImageView
+                android:id="@+id/iv_formation"
+                android:layout_width="70dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/football_court" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

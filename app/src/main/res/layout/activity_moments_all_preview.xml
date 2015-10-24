@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.kinth.mmspeed.friend.touchgallery.GalleryWidget.GalleryViewPager
+        android:id="@+id/gallery_viewer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_bottom_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/half_transparent"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:padding="5dp" >
+
+        <CheckBox 
+            android:id="@+id/checkbox_all_preview"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"
+        	android:text="选择"
+        	android:textColor="@android:color/white"
+        	android:layout_marginRight="@dimen/dp_5"
+        	android:textSize="@dimen/sp_16"
+        	android:contentDescription="@string/contentDescription"
+        	android:gravity="center"
+        	android:button="@drawable/selector_checkbox"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_nav_button" />
+
+</RelativeLayout>

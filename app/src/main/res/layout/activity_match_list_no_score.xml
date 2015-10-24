@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_nav_only_back" />
+
+    <com.kinth.football.view.xlist.XListView
+        android:id="@+id/listview_match_no_score"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:focusableInTouchMode="true"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

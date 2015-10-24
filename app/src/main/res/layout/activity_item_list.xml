@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sele_addres_lin"
+    android:orientation="vertical"
+    >
+    
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/common_nav_only_back" />
+    
+    <fragment
+        android:id="@+id/item_list"
+        android:name="com.kinth.football.ui.team.ItemListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ItemListActivity"
+        tools:ignore="NewApi"
+        tools:layout="@android:layout/list_content" />
+
+</LinearLayout>

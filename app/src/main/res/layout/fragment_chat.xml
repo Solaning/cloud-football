@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:alpha="0.75"
+        android:background="@color/speak_light_blue"
+        android:padding="10dp" >
+
+        <com.kinth.football.view.ClearEditText
+            android:id="@+id/et_msg_search"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/base_action_bar_height"
+            android:alpha="0.75"
+            android:background="@drawable/clear_edit_text_style"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="搜索：球员/讨论组"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/ActionBar" >
+
+        <ImageButton
+            android:id="@+id/nav_left"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_slt"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"
+            android:scaleType="centerInside" />
+
+        <com.kinth.football.view.ClearEditText
+            android:id="@+id/et_msg_search"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/nav_right_image"
+            android:layout_toRightOf="@id/nav_left"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="搜索球员"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textCursorDrawable="@null" />
+
+        <ImageView
+            android:id="@+id/nav_right_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#662F414C"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:text="省份:"
+                    android:textColor="@color/white" />
+
+                <Spinner
+                    android:id="@+id/province_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:scrollbars="none" >
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:text="城市:"
+                    android:textColor="@color/white" />
+
+                <Spinner
+                    android:id="@+id/city_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:scrollbars="none" >
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:text="位置:"
+                    android:textColor="@color/white" />
+
+                <Spinner
+                    android:id="@+id/position_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:scrollbars="none" >
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 位置显示 -->
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/system_text_color"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.4"
+        android:background="@color/system_text_color" />
+
+    <com.kinth.football.view.xlist.XListView
+        android:id="@+id/listview_search_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:focusableInTouchMode="true"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:smoothScrollbar="true" />
+
+    <include
+        layout="@layout/tips_has_no_data_current"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/tips_has_no_data_current"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rtl_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/btn_selector"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_search_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/icon_msg_search"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_search_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+</LinearLayout>

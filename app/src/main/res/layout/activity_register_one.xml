@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AppWidget"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColor" >
+
+<LinearLayout 
+    android:id="@+id/llt_tittlebar"
+     android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    >
+        <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/llt_main"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/llt_tittlebar"
+    android:layout_marginTop="20dp"  
+    android:orientation="vertical"
+      >
+        <RelativeLayout 
+              android:layout_width="fill_parent"
+    	android:layout_height="46dp"
+            
+            >
+            <TextView 
+                 android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     android:text="国家和地区区号"
+     style="@style/BaseText"
+                />
+        </RelativeLayout>
+        <EditText
+        android:id="@+id/edtPhoneCode"
+        style="@style/register_edit"
+        android:layout_below="@+id/edtPhone"
+        android:layout_marginBottom="@dimen/dp_1"
+        android:drawableLeft="@drawable/icon_register_email"
+        
+        android:hint="@string/msg_input_verifi"
+        android:inputType="number"
+        android:paddingRight="@dimen/dp_100" />
+    <EditText
+        android:id="@+id/edtPhone"
+        style="@style/register_edit"
+        android:layout_marginBottom="@dimen/dp_1"
+        android:drawableLeft="@drawable/icon_register_phone"
+        android:hint="@string/msg_input_phone"
+        android:inputType="phone" />
+	
+    
+
+    <EditText
+        android:id="@+id/edtPwd"
+        style="@style/register_edit"
+        android:layout_below="@+id/edtPhoneCode"
+        android:drawableLeft="@drawable/icon_register_pwd"
+        android:hint="@string/hit_password"
+        android:inputType="textVisiblePassword" />
+		
+</LinearLayout>
+
+<Button
+    android:id="@+id/btn_regist"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:layout_below="@+id/llt_main"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:text="下一步" 
+    style="@style/WhiteText"
+    android:onClick="btnOnClick"
+    android:background="@drawable/btn_login_selector"/>
+
+</RelativeLayout>

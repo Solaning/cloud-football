@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null" >
+
+    <include
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_nav_only_back" />
+
+    <GridView
+        android:id="@+id/gridGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="@dimen/GridItemSize"
+        android:gravity="center_horizontal"
+        android:fastScrollEnabled="false"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="auto_fit"
+        android:scrollbarStyle="insideOverlay"
+        android:smoothScrollbar="true"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp"
+        tools:listitem="@layout/gallery_photo_item" >
+    </GridView>
+
+</RelativeLayout>

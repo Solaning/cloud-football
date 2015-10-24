@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_nav_only_back" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <!-- 全家福 -->
+            <RelativeLayout
+                android:id="@+id/l_team_allfamily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/create_team_bg"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:alpha="0.8" >
+                <com.kinth.football.view.RoundImageView
+                    android:id="@+id/iv_family_photo"
+                    style="@style/Smile.ImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    imagecontrol:border_inside_color="#ffffff"
+                    imagecontrol:border_outside_color="#fffefa"
+                    imagecontrol:border_thickness="1dp" />
+                
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_family_photo"
+                    android:text="选择全家福"
+                    android:textColor="@color/create_team_text" />
+            </RelativeLayout>
+
+            <!-- 队徽 -->
+            <RelativeLayout
+                android:id="@+id/l_team_brage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/create_team_bg"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:alpha="0.8" >
+                <com.kinth.football.view.RoundImageView
+                    android:id="@+id/iv_badge"
+                    style="@style/Smile.ImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    imagecontrol:border_inside_color="#ffffff"
+                    imagecontrol:border_outside_color="#fffefa"
+                    imagecontrol:border_thickness="1dp" />
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_badge"
+                    android:text="选择队徽"
+                    android:textColor="@color/create_team_text" />
+            </RelativeLayout>
+
+            <!-- 教练（原先第三队长） -->
+            <RelativeLayout
+                android:id="@+id/rel_third_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/create_team_bg"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:alpha="0.8" >
+                <com.kinth.football.view.RoundImageView
+                    android:id="@+id/iv_third_caption"
+                    style="@style/Smile.ImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_default_head"
+                    imagecontrol:border_inside_color="#ffffff"
+                    imagecontrol:border_outside_color="#fffefa"
+                    imagecontrol:border_thickness="1dp" />
+                
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/slelect_coach"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/iv_third_caption"
+                    android:text="选择教练"
+                    android:textColor="@color/create_team_text" />
+                
+                <TextView
+                    android:id="@+id/coach_name"
+                    android:layout_below="@id/slelect_coach"
+                    android:layout_alignLeft="@id/slelect_coach"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未设置"
+                    android:visibility="visible"
+                    android:textColor="@android:color/white"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+            </RelativeLayout>
+            
+            <!-- 队长，副队选择 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <!-- 队长 -->
+                <LinearLayout
+                    android:id="@+id/llt_first_captain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0.8"
+                    android:background="@color/create_team_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                       android:gravity="center"
+                        android:text="队长"
+                        android:textColor="@color/create_team_text" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.1dp"
+                        
+                        android:layout_marginTop="5dp"
+                        android:background="@color/create_team_text" />
+
+                    <com.kinth.football.view.RoundImageView
+                        android:id="@+id/iv_first_captain"
+                        style="@style/Smile.ImageView"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/icon_default_head"
+                        imagecontrol:border_inside_color="#ffffff"
+                        imagecontrol:border_outside_color="#fffefa"
+                        imagecontrol:border_thickness="1dp" />
+
+                    <TextView
+                        android:id="@+id/first_caption_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/create_team_bg"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="未设置"
+                        android:textColor="#ffffff" 
+                         android:singleLine="true"
+                    android:ellipsize="end"/>
+                </LinearLayout>
+
+                <!-- 队副 -->
+
+                <LinearLayout
+                    android:id="@+id/llt_second_captain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:alpha="0.8"
+                    android:background="@color/create_team_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                       android:gravity="center"
+                        android:text="队副"
+                        android:textColor="@color/create_team_text" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.1dp"
+                      
+                        android:layout_marginTop="5dp"
+                       
+                        android:background="@color/create_team_text" />
+
+                    <com.kinth.football.view.RoundImageView
+                        android:id="@+id/iv_second_captain"
+                        style="@style/Smile.ImageView"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/icon_default_head"
+                        imagecontrol:border_inside_color="#ffffff"
+                        imagecontrol:border_outside_color="#fffefa"
+                        imagecontrol:border_thickness="1dp" />
+
+                    <TextView
+                        android:id="@+id/second_caption_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/create_team_bg"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="未设置"
+                        android:textColor="#ffffff" 
+                         android:singleLine="true"
+                    android:ellipsize="end"/>
+                </LinearLayout>
+            </LinearLayout>
+            
+             <!--  设置队服 -->
+            <RelativeLayout
+                android:id="@+id/rel_select_jersey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/create_team_bg"
+                android:minHeight="30dp"
+                android:padding="10dp"
+                android:alpha="0.8" >
+                
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="设置队服"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/create_team_text" />
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:alpha="0.8"
+                android:background="@color/create_team_bg"
+                android:orientation="vertical" >
+
+                <!-- 球队名称 -->
+                <LinearLayout
+                    android:id="@+id/llt_team_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/team_name"
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="球队名称"
+                        android:textColor="@color/create_team_text" />
+                    <TextView
+                        android:id="@+id/tv_team_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="球队名称"
+                        android:textSize="18sp"
+                        android:textColor="#ffffff" />
+                    <ImageView
+                        style="@style/Smile.ImageView"
+                        android:layout_width="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@string/action_settings"
+                        android:src="@drawable/img_to" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+                <!-- 城市 -->
+                <RelativeLayout
+                    android:id="@+id/llt_team_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="城市"
+                        android:textColor="@color/create_team_text" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_team_city"
+                            style="@style/Smile.TextView._Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            style="@style/Smile.ImageView"
+                            android:layout_width="20dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/action_settings"
+                            android:src="@drawable/img_to"  />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+				
+				<RelativeLayout
+                    android:id="@+id/llt_team_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="地区"
+                        android:textColor="@color/create_team_text" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_team_region"
+                            style="@style/Smile.TextView._Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            style="@style/Smile.ImageView"
+                            android:layout_width="20dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/action_settings"
+                            android:src="@drawable/img_to"  />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+                <!-- 成立时间 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="成立时间"
+                        android:textColor="@color/create_team_text" />
+
+                    <TextView
+                        android:id="@+id/tv_team_founded_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="20152112"
+                        android:textSize="18sp"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+
+                <!-- 口号 -->
+
+                <LinearLayout
+                    android:id="@+id/llt_team_slogan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="口号"
+                        android:textColor="@color/create_team_text" />
+
+                    <TextView
+                        android:id="@+id/tv_team_slogan"
+                      android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textColor="#ffffff" 
+                        android:gravity="right"/>
+
+                    <ImageView
+                        style="@style/Smile.ImageView"
+                        android:layout_width="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@string/action_settings"
+                     android:src="@drawable/img_to"   />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+
+                <!-- 介绍 -->
+
+                <LinearLayout
+                    android:id="@+id/llt_team_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="介绍"
+                        android:textColor="@color/create_team_text" />
+
+                    <TextView
+                        android:id="@+id/tv_team_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ffffff" 
+                        android:gravity="right"/>
+
+                    <ImageView
+                        style="@style/Smile.ImageView"
+                        android:layout_width="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@string/action_settings"
+                        android:src="@drawable/img_to"  />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <Button 
+                android:id="@+id/btn_delete_team"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/create_team_bg"
+                android:alpha="0.8"
+                android:text="删除球队"
+                android:textColor="@color/create_team_text"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

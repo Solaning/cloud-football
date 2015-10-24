@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_nav_button" />
+
+    <com.kinth.football.view.ClearEditText
+        android:id="@+id/et_msg_search"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_action_bar_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#662F414C"
+        android:drawableLeft="@drawable/icon_msg_search"
+        android:drawablePadding="10dp"
+        android:hint="@string/message_search_hint"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true" 
+         android:textColor="@android:color/white"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.kinth.football.view.xlist.XListView
+            android:id="@+id/listview_select_riving"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+          
+         
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:focusableInTouchMode="true"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@android:color/transparent"
+            android:smoothScrollbar="true" />
+
+        <RelativeLayout
+            android:id="@+id/rtl_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:visibility="invisible" 
+            android:background="@drawable/btn_selector">
+
+            <ImageView
+                android:id="@+id/iv_search_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                
+                android:padding="@dimen/dp_10"
+             
+               
+                android:src="@drawable/icon_msg_search"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_search_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="@dimen/sp_16"
+                 android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

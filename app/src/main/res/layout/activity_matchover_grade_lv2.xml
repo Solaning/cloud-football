@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg" >
+    <LinearLayout 
+          android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="center"
+        >
+        <ImageView 
+                 android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_launcher"
+    android:id="@+id/grade_img_picture"
+            
+            />
+        <TextView 
+            android:paddingTop="5dp"
+             android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="成龙"
+    android:textSize="16sp"
+    android:id="@+id/grade_txt_name"
+            />
+        
+        
+    </LinearLayout>
+  <LinearLayout 
+        android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="3"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+      >
+      <LinearLayout 
+           android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:orientation="horizontal"
+          >
+          <TextView 
+             android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:text="球技"
+   
+              />
+          <RatingBar 
+                android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     style="@style/MyRatingBar"
+     android:numStars="5"
+      android:stepSize = "1"
+      android:id="@+id/grade_skill"
+              />
+          
+      </LinearLayout>
+           <LinearLayout 
+           android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:orientation="horizontal"
+          >
+          <TextView 
+             android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:text="球品"
+  
+              />
+          <RatingBar 
+              android:id="@+id/grade_character"
+                android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+       style="@style/MyRatingBar"
+     android:numStars="5"
+      android:stepSize = "1"
+              />
+          
+      </LinearLayout>
+      
+      
+  </LinearLayout>
+</LinearLayout>

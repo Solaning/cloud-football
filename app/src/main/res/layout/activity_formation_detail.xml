@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/iv_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="80dp"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@color/darkblue"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="4+3+3阵型"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@color/lightblue"
+                android:padding="5dp"
+                android:minHeight="70dp"
+                android:text="433阵型是一种纯进攻类型的足球战术,在七八十年代曾经风靡世界足坛,当时在球衣号码中,7号和11号是固定的左右边锋的号码,他们基本上只参与球队的进攻,不参与球队的防守,(当然在对方主罚任意球和角球是个例外)"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/finger_tips"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb_load"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center" />
+        
+         <com.kinth.football.view.HeaderLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/common_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_action_bar_height" >
+        </com.kinth.football.view.HeaderLayout>
+        
+    </FrameLayout>
+
+</LinearLayout>

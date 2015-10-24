@@ -1,0 +1,178 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.kinth.football"
+        minSdkVersion 11
+        targetSdkVersion 22
+        versionCode 7
+        versionName "1.1.3"
+
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            // No debug config
+        }
+
+        release {
+            storeFile file("../kinth_sixin_key.keystore")
+            storePassword "qs@123456"
+            keyAlias "kinth_sixin"
+            keyPassword "qs@123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+
+            minifyEnabled true
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为boohee_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "football_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+//    productFlavors {
+//        xiaomi {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+//        }
+//        _360 {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_360"]
+//        }
+//        baidu {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+//        }
+//        wandoujia {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+//        }
+//    }
+    productFlavors {
+        GUANWANG {}//官网
+        Tencent {} //腾讯应用宝
+        Baidu {} //百度
+        Youyi {} //优亿市场
+        Wandoujia {} //豌豆荚
+        Qihu360 {}
+        Mobile_MM {} //移动MM
+        Huawei {} //华为
+        mumayi {} //木蚂蚁
+        Yingyonghui {} //应用汇
+        Gfan {}//机锋
+        AnZhi {} //安智
+        XiaoMi {}//小米
+        Sougou {}//搜狗
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [FOOTBALL_CHANNEL_VALUE: name]
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+}
+
+repositories {
+    //eventbus smack
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    //MPAndroidChart
+    maven {
+        url "https://jitpack.io"
+    }
+    //crashlytics
+    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:22.2.0'
+    //smack
+    compile "org.igniterealtime.smack:smack-android-extensions:4.1.0"
+    compile "org.igniterealtime.smack:smack-tcp:4.1.0"
+
+	//crashlytics
+	compile ('com.crashlytics.sdk.android:crashlytics:2.2.4@aar') {
+        transitive = true;
+    }
+	
+    //eventbus
+    compile 'de.greenrobot:eventbus:2.4.0'
+    //greendao
+    compile 'de.greenrobot:greendao:1.3.7'
+    //volley
+    compile 'com.mcxiaoke.volley:library:1.0.17'
+    //MPAndroidChart
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.1'
+    //cropper
+    compile 'com.edmodo:cropper:1.0.1'
+    //android-styled-dialogs
+    compile 'com.avast:android-styled-dialogs:2.2.0'
+    //stickygridheaders
+    compile 'com.tonicartos:stickygridheaders:1.0.1'
+
+    compile project(':wheel')
+    compile project(':leftlockedgallery')
+    compile project(':datetimepicker')
+    compile project(':androidbootstrap')
+    compile project(':smssdk')
+    compile project(':styled_dialogs')
+}
+
+
+

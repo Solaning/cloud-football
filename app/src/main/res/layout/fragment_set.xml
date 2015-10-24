@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/setting_lin"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_selector"
+        android:minHeight="65dp"
+        android:onClick="resetPassword"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="修改密码"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/img_to" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_selector"
+        android:minHeight="65dp"
+        android:onClick="updataVersionOnClick"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="检查新版本"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="updataVersionOnClick" />
+
+        <TextView
+            android:id="@+id/current_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text=" "
+            />
+        
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/img_to" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_next_selector"
+        android:onClick="logoutOnClik"
+        android:text="@string/logout" 
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="30dp"
+     android:background="#90000000" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+         <!--   android:background="#cc2F414C"-->
+  <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+   
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      >
+        <TextView
+            android:id="@+id/update_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="有新版本 1.2.0"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="新版本有以下改进，建议升级:"
+            android:textColor="@color/system_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/new_version_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+</LinearLayout>
+        <Button
+            android:id="@+id/update_to_new_version"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="15dp"
+             android:background="@drawable/btn_next_selector"
+            android:text="立即升级"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cancel_to_update"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="15dp"
+             android:background="@drawable/btn_next_selector"
+            android:text="暂时不升级，谢谢"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/appname" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LinearLayout1"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edtPhone"
+            style="@style/register_edit"
+            android:layout_marginBottom="@dimen/dp_1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#7f2e667f"
+            android:drawableLeft="@drawable/icon_register_name"
+            android:hint="@string/msg_input_phone"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/edtPwd"
+            style="@style/register_edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#7f2e667f"
+            android:drawableLeft="@drawable/icon_register_password"
+            android:hint="@string/hit_password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llt_main"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/WhiteText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_login_selector"
+            android:onClick="btnOnClick"
+            android:text="登录"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_foget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_8"
+            android:text="忘记密码？"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="点击此处注册"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

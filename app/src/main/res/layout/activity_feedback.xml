@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg" >
+        <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    ><LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/btn_selector"
+      android:orientation="vertical" >
+
+      <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="5dp"
+       android:text="问题和意见"
+       android:textColor="@color/system_text_color"
+       android:textSize="18sp"
+       />
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="0.1dp"
+             android:alpha="0.4"
+             android:background="@color/system_text_color" />
+
+   <EditText 
+       android:id="@+id/edt_feedback_content"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#213039"
+       android:padding="5dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:hint="请简要描述你的问题和意见"
+       android:textColor="@color/white"
+       android:textSize="16sp"
+       android:minLines="4"
+       android:gravity="top|left"
+       />
+   </LinearLayout>
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/btn_selector"
+      android:orientation="vertical"  >
+     <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="5dp"
+       android:text="图片(提供问题截图)"
+       android:textColor="@color/system_text_color"
+       android:textSize="18sp"
+       />
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="0.1dp"
+             android:alpha="0.4"
+             android:background="@color/system_text_color" />
+
+   <com.kinth.football.view.MyGridView
+       android:id="@+id/gridGallery"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="top|center_horizontal"
+       android:layout_marginBottom="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginTop="10dp"
+       android:background="#213039"
+       android:cacheColorHint="@android:color/transparent"
+       android:columnWidth="@dimen/GridItemSizeTiny"
+       android:gravity="center"
+       android:horizontalSpacing="10dp"
+       android:listSelector="@android:color/transparent"
+       android:numColumns="auto_fit"
+       android:padding="10dp"
+       android:scrollbarStyle="insideOverlay"
+       android:smoothScrollbar="true"
+       android:stretchMode="columnWidth"
+       android:verticalSpacing="10dp"
+       tools:listitem="@layout/moments_publish_gallery_item" >
+
+    </com.kinth.football.view.MyGridView>
+    </LinearLayout>
+       <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_next_selector"
+        android:onClick="logoutOnClik"
+        android:text="@string/commit" 
+        android:textColor="@android:color/white"/>
+       </LinearLayout></ScrollView>
+</LinearLayout>

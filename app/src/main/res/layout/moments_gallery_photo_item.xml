@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kinth.mmspeed.ui.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rtl_moemnts_gallery_item"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_border"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imgQueue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/contentDescription"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/view_pick_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/contentDescription"
+        android:gravity="center"
+        android:button="@drawable/selector_checkbox" />
+
+</com.kinth.mmspeed.ui.SquareLayout>

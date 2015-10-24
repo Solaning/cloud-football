@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    tools:context="com.kinth.football.friend.MomentPersonalZoneActivity" >
+    
+    <ImageView
+        android:id="@+id/iv_mtopimg"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_moment_personal" />
+
+        <com.kinth.football.view.RoundImageView
+            android:id="@+id/siv_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_head"
+            imagecontrol:border_inside_color="#ffffff"
+            imagecontrol:border_outside_color="#fffefa"
+            imagecontrol:border_thickness="1dp" />
+
+        <TextView
+            android:id="@+id/tv_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/siv_img"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+</RelativeLayout>

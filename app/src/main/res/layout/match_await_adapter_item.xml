@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:id="@+id/rel_item"
+     >
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        >
+        <ImageView
+            android:id="@+id/hometeam_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/team_bage_default"
+            />
+        
+        <TextView
+            android:id="@+id/home_team"
+            android:layout_below="@id/hometeam_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:text="主队名"
+        	android:layout_centerHorizontal="true"
+        	android:layout_marginTop="10dp"
+        	/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/await_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:id="@+id/start_time1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="03月28日"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        
+        <TextView
+            android:id="@+id/start_time2"
+            android:layout_below="@id/start_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:text="08:30"
+        	android:visibility="gone"
+        	android:layout_marginTop="10dp"
+        	android:layout_centerHorizontal="true"
+        	android:layout_centerVertical="true"
+        	/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/await_time"
+        android:layout_marginRight="20dp"
+        >
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="主"
+        	android:textSize="20sp"
+        	android:layout_marginTop="20dp"
+        	/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/await_time"
+        android:layout_marginLeft="20dp"
+        >
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="客"
+        	android:textSize="20sp"
+        	android:layout_marginTop="20dp"
+        	/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+        <ImageView
+            android:id="@+id/awayteam_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/team_bage_default"
+            />
+        
+        <TextView
+            android:id="@+id/away_team"
+            android:layout_below="@id/awayteam_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:text="客队名"
+        	android:layout_centerHorizontal="true"
+        	android:layout_marginTop="10dp"
+        	/>
+    </RelativeLayout>
+    
+    
+    
+</RelativeLayout>

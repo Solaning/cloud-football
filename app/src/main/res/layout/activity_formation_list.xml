@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_formation_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.kinth.football.view.HeaderLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/common_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_action_bar_height" >
+    </com.kinth.football.view.HeaderLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.kinth.football.view.xlist.XListView
+            android:id="@+id/list_formation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="true"
+            android:listSelector="#00000000" />
+
+        <ImageView
+            android:id="@+id/iv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/finger_tips_slide"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

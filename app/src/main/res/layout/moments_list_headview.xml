@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/viewGroup"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+        xmlns:imagecontrol="http://schemas.android.com/apk/res-auto" >
+
+    <RelativeLayout
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/llt_comment_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/moments_kuang"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" 
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <com.kinth.football.view.RoundImageView
+                android:id="@+id/iv_head_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                        imagecontrol:border_inside_color="#ffffff"
+        imagecontrol:border_outside_color="#fffefa"
+        imagecontrol:border_thickness="1dp" 
+        android:layout_gravity="center">
+            </com.kinth.football.view.RoundImageView>
+
+            <TextView
+                android:id="@+id/tv_comment_num_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16" 
+                android:singleLine="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

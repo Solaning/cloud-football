@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <com.kinth.football.view.RoundImageView
+            android:id="@+id/teammate_cloth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/teammate" />
+
+        <TextView
+            android:id="@+id/tv_number_tips"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/bg_jerseynum"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/teammate_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:background="@drawable/delete"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/teammate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:ellipsize="none"
+        android:gravity="center_horizontal"
+        android:maxLines="100"
+        android:scrollHorizontally="false"
+        android:text="球员"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通用title bar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActionBar" >
+
+    <ImageButton
+        android:id="@+id/nav_left"
+        android:layout_width="60.0dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/back_slt" />
+
+    <ImageButton
+        android:id="@+id/nav_right"
+        android:layout_width="60.0dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@null"/>
+
+    <TextView
+        android:id="@+id/nav_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+
+</RelativeLayout>

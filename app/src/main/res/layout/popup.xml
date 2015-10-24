@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@color/lightblue"
+    android:layout_margin="50dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#425C6C"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="5dp"
+        android:text="阵容说明"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/darkblue"
+        android:clickable="true"
+        android:hint="标题"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_desctiption"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:gravity="top"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/darkblue"
+        android:clickable="true"
+        android:hint="说明内容"
+        android:maxLength="110"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:layout_margin="15dp"
+            android:text="关闭"
+            android:textColor="@color/white"
+            android:alpha="0.85"
+            android:textSize="16sp"
+            android:background="@drawable/btn_selector2" />
+        
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:layout_margin="15dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/btn_selector2" />
+
+    </LinearLayout>
+
+</LinearLayout>

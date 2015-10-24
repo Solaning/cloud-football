@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/entireLayout">
+      <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/common_nav_only_back" />
+    <ListView 
+        android:id="@+id/lv_positon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/system_text_color"
+        android:dividerHeight="0.1dp"
+        
+        ></ListView>
+
+</LinearLayout>

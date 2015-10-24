@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/ActionBar" >
+
+        <ImageButton
+            android:id="@+id/nav_left"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_slt"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/nav_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:minHeight="35dp"
+            android:minWidth="40dp"
+            android:padding="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="完成"
+            android:textColor="@color/white_color_selector"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nav_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="22.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             >
+
+            <!-- 全家福 -->
+            <RelativeLayout
+                android:id="@+id/layout_team_allfamily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/create_team_bg"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:alpha="0.8" >
+
+                <com.kinth.football.view.RoundImageView
+                    android:id="@+id/family_photo"
+                    style="@style/Smile.ImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/team_family_defualt"
+                    imagecontrol:border_inside_color="#ffffff"
+                    imagecontrol:border_outside_color="#fffefa"
+                    imagecontrol:border_thickness="1dp" />
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/family_photo"
+                    android:text="选择全家福"
+                    android:textColor="@color/create_team_text" />
+            </RelativeLayout>
+
+            <!-- 队徽 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_team_brage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/create_team_bg"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:alpha="0.8" >
+
+                <com.kinth.football.view.RoundImageView
+                    android:id="@+id/badge"
+                    style="@style/Smile.ImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/team_bage_default"
+                    imagecontrol:border_inside_color="#ffffff"
+                    imagecontrol:border_outside_color="#fffefa"
+                    imagecontrol:border_thickness="1dp" />
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/badge"
+                    android:text="选择队徽"
+                    android:textColor="@color/create_team_text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/create_team_bg"
+                android:orientation="vertical"
+                android:alpha="0.8" >
+
+                <!-- 球队名称 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/team_name"
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="球队名称"
+                        android:textColor="@color/create_team_text" />
+
+                    <EditText
+                        android:id="@+id/et_input_team_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请填写名称（必填项）"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+                <!-- 城市 -->
+
+                <RelativeLayout
+                    android:id="@+id/btn_input_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="城市"
+                        android:textColor="@color/create_team_text" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/city_name"
+                            style="@style/Smile.TextView._Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp" 
+                            android:textColor="#ffffff"/>
+
+                        <ImageView
+                            style="@style/Smile.ImageView"
+                            android:layout_width="20dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/action_settings"
+                            android:src="@drawable/img_to" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+
+                <!-- 地区 -->
+
+                <RelativeLayout
+                    android:id="@+id/select_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="区/县"
+                        android:textColor="@color/create_team_text" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/region_name"
+                            style="@style/Smile.TextView._Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            style="@style/Smile.ImageView"
+                            android:layout_width="20dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/action_settings"
+                             android:src="@drawable/img_to" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/create_team_bg"
+                android:orientation="vertical"
+                android:alpha="0.8" >
+
+                <!-- 主场 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="主场"
+                        android:textColor="@color/create_team_text" />
+
+                    <EditText
+                        android:id="@+id/et_input_home_ground"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请填写主场地详细名称"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+
+                <!-- 口号 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/Smile.TextView._Black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="口号"
+                        android:textColor="@color/create_team_text" />
+
+                    <EditText
+                        android:id="@+id/et_input_slogan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请填写球队口号"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/create_team_bg"
+                android:orientation="vertical" 
+                android:alpha="0.8"
+                >
+                
+                <!-- 介绍 -->
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_marginLeft="10dp"
+                    android:minHeight="50dp"
+                    android:text="介绍"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/create_team_text" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/create_team_text" />
+
+                <EditText
+                    android:id="@+id/et_input_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="请填写球队介绍"
+                    android:inputType="textMultiLine"
+   					android:gravity="left|top"
+					android:minLines="5"
+					android:textColor="#ffffff"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

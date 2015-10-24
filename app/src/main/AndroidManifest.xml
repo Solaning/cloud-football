@@ -1,0 +1,534 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kinth.football"
+    android:installLocation="auto">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- 基本权限start -->
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 外部存储卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 基本权限end -->
+
+    <!-- 具体功能所需要的权限start -->
+    <!-- UIL框架所需的权限 (ImageLoader)-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 通知震动权限 (创建阵容) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 录音权限(聊天-语音消息) -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 摄像头权限(拍照上传) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 具体功能所需要的权限end -->
+    <!-- 开机启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:name="com.kinth.football.CustomApplcation"
+        android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/DefaultLightTheme">
+
+        <activity
+            android:name="com.kinth.football.ui.EntryActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashAppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.TeamEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.Select_Referee_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchOverGradeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity=""
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.LocationActivity" />
+        <activity
+            android:name=".ui.ImageBrowserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name=".ui.mine.ModifyInfoActivity"
+            android:theme="@style/DefaultLightTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.RegistTwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.kinth.football.chat.ui.ChatActivity"
+            android:theme="@style/ChatTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".ui.mine.ModifyPositionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.mine.SetMyInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name=".ui.mine.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name=".ui.user.SetIconAndNickActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.user.ChooseCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.user.ChooseProvinceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.mine.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="cn.smssdk.SMSSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.kinth.football.ui.team.CreateTeamActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.TeamInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.TeamInfoForGuestActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.ModifyTeamDescriptionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.ModifyTeamSloganActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.ModifyTeamNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.ModifyTeamHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.TeamMatchRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.PickTeamActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.gallery.CropImageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.CreateFriendMatchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kinth.football.ui.match.SelectMatchRivingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchInvitationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MessageCenterActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity=""
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchPendingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchCreatedActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchKickOffActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchOverActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.AllMatchListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchAll_Finished_ByTeam"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchFriendly_Finished_ByTeam"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchLeague_Finished_ByTeam"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnInvitationStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnCreatedStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnPendingStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnKickOffStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnOverStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnFinishedStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.MatchDetailOnCancleStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.SearchTeamActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.HandlePushMessageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.TeamMemberListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.InviteMemberActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme" />
+        <activity
+            android:name="com.kinth.football.ui.team.SelectAddressActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.kinth.football.ui.team.ItemDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.formation.CreateFormationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.formation.FormationListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.TeamJerseyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.formation.FormationDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.TeamPlayerInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.TeamPlayerMatchRecordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.chat.ui.TeamActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.match.FriendlyListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.match.LeagueListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.match.JerseyofTeamActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.HomeSearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.HomeSearchPlayerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTeam" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.HomeSearchTeamActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTeam" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.HomeSearchPlayerSelectPositionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.team.RegionListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.CommonWebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.PKActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+        </activity>
+
+        <activity
+            android:name="com.kinth.football.chat.ui.RecentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <data android:mimeType="image/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.chat.ui.BiggerTextSizeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.ui.match.TournamentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.match.invite.InviteMatchListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Animation.Activity" >
+        </activity>
+        <activity
+            android:name="com.kinth.football.friend.MomentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.friend.MomentsPublishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.friend.MomentsPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.kinth.football.friend.MomentsGridPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.kinth.football.friend.MomentPersonalZoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.kinth.football.friend.MomentsPersonalZoneItemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.friend.MomentsLookOverCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+        <activity
+            android:name="com.kinth.football.ui.cloud5ranking.Clound5RankingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.kinth.football.ui.LeagueWebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultLightTheme" />
+
+        <!-- 配置一个Service组件 -->
+        <service android:name="com.kinth.football.chat.ChatService" >
+            <intent-filter>
+                <!-- 为该Service组件的intent-filter配置action -->
+                <action android:name="com.kinth.football.chat.ChatService" />
+            </intent-filter>
+        </service>
+
+        <!-- baidu map -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="hfyMtrWcv6qTQyvwgtusaYGE" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.kinth.football.NetStateReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!--Crashlytics-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0bf4034ce9ce542506e20e75d709580645cdc658" />
+        <!--android渠道包-->
+        <meta-data
+            android:name="FOOTBALL_CHANNAL"
+            android:value="${FOOTBALL_CHANNEL_VALUE}"/>
+    </application>
+
+</manifest>

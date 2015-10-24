@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entire_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+    
+    <LinearLayout
+        android:id="@+id/llt_message_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:gravity="center_horizontal"
+        android:minHeight="@dimen/dp_20"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_team_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="球队消息"
+            android:gravity="center_vertical"
+            android:textColor="#8ba3af"
+            android:textSize="@dimen/sp_16" />
+        
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#8ba3af"
+            android:textSize="@dimen/sp_16" />
+        
+         <TextView
+            android:id="@+id/tv_group_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="群聊消息"
+            android:gravity="center_vertical"
+            android:textColor="#8ba3af"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_20" />
+
+    </LinearLayout>
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" >
+        
+        <com.kinth.football.view.xlist.XListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="true"
+            android:listSelector="@color/transparent"
+            android:paddingBottom="10dp"
+            android:scrollbars="none"
+            android:transcriptMode="normal" />
+
+        <RelativeLayout
+            android:id="@+id/layout_record"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/chat_top_voice_bg"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_record"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/chat_icon_voice1" />
+
+            <TextView
+                android:id="@+id/tv_voice_tips"
+                style="@style/Smile.TextView._White"
+                android:layout_below="@id/iv_record"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/voice_up_tips"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/recording_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/recording_hint_bg"
+            android:padding="10dp"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/mic_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/record_animate_01" />
+
+            <TextView
+                android:id="@+id/recording_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mic_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:text="@string/move_up_to_cancel"
+                android:textSize="10sp" />
+        </RelativeLayout>
+        
+        <ImageView 
+            android:id="@+id/iv_record_permission"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/record_permission"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/include_chat_bottom_bar"
+         layout="@layout/include_chat_bottom_bar" />
+
+</LinearLayout>
